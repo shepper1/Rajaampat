@@ -1,0 +1,481 @@
+{
+  "pays": "Indonésie",
+  "drapeau": "🇮🇩",
+  "symbole": "🌴",
+  "titre": "Raja Ampat : L'Archipel aux Trésors Subaquatiques",
+  "budget": "5200€",
+  "duree": "20 jours",
+  "temps_vol": "Environ 20-24 heures (avec escales)",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "✈️",
+      "titre": "Départ de Paris vers l'aventure indonésienne",
+      "legende": "Le grand départ est lancé ! Préparez-vous pour un long voyage transcontinental. Profitez des escales pour vous détendre et vous imprégner de l'excitation de l'aventure qui vous attend. Le chemin vers Raja Ampat est une partie intégrante de l'expérience, marquant le début d'une immersion totale dans un monde lointain et préservé.",
+      "lieu": "Paris",
+      "activites": [
+        "✈️ <strong>Vol Paris - Jakarta/Doha/Singapour</strong>: Embarquement pour un vol long-courrier, première étape vers l'Indonésie. Profitez du confort à bord pour vous reposer ou commencer à rêver de vos futures explorations sous-marines."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Conseil de vol",
+          "texte": "Privilégiez les compagnies offrant un bon confort sur les vols longs, comme Qatar Airways, Emirates ou Singapore Airlines, pour un voyage plus agréable."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🌍",
+      "titre": "Transit international",
+      "legende": "Ce jour est dédié au transit aérien, traversant les fuseaux horaires et les continents. C'est l'occasion de se reposer, de lire ou de regarder des films en attendant la prochaine connexion. Chaque escale vous rapproche un peu plus de la magie de Raja Ampat, vous préparant mentalement à l'évasion.",
+      "lieu": "En transit",
+      "activites": [
+        "✈️ <strong>Vol en transit</strong>: Poursuite du voyage avec une escale majeure, souvent à Jakarta, Singapour ou Doha, avant le vol domestique vers Sorong. Hydratez-vous et étirez-vous régulièrement pour minimiser la fatigue."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "💤",
+          "titre": "Récupération",
+          "texte": "Essayez de dormir pendant les vols pour mieux gérer le décalage horaire. Un masque de sommeil et des bouchons d'oreille peuvent être très utiles."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🛬",
+      "titre": "Arrivée à Sorong et transfert vers Waisai",
+      "legende": "Après un long périple, vous atterrissez enfin à Sorong, porte d'entrée de Raja Ampat. La chaleur et l'humidité tropicales vous accueillent. Une fois le court vol domestique terminé, un ferry vous mènera à Waisai, la capitale de Waigeo, où l'air marin commence déjà à vous envelopper, annonçant la proximité du paradis.",
+      "lieu": "Sorong & Waisai",
+      "activites": [
+        "✈️ <strong>Vol domestique vers Sorong</strong>: Atterrissage à l'aéroport de Sorong (SOQ), où l'aventure commence réellement. Récupérez vos bagages et préparez-vous pour la prochaine étape.",
+        "🚢 <strong>Transfert en ferry vers Waisai</strong>: Prenez le ferry public rapide depuis le port de Sorong jusqu'à Waisai (environ 2 heures). Profitez des premières vues sur les îles verdoyantes émergeant de l'océan turquoise."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "💰",
+          "titre": "Permis Raja Ampat",
+          "texte": "N'oubliez pas d'acheter votre permis de conservation (PIN) à Sorong ou Waisai. Il est obligatoire et finance la protection de l'archipel."
+        },
+        {
+          "symbole": "💵",
+          "titre": "Argent liquide",
+          "texte": "Retirez suffisamment d'argent liquide à Sorong car les distributeurs sont rares et peu fiables à Waisai et inexistants sur les îles."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🚶‍♀️",
+      "titre": "Premiers pas à Waisai et découverte locale",
+      "legende": "Journée d'acclimatation à Waisai, la petite capitale de l'archipel. L'ambiance y est décontractée, entre le marché coloré et les plages paisibles. C'est l'occasion de prendre ses marques, de goûter aux saveurs locales et de se préparer aux merveilles sous-marines qui vous attendent. Laissez-vous bercer par le rythme insulaire.",
+      "lieu": "Waisai, Waigeo",
+      "activites": [
+        "🚶‍♂️ <strong>Exploration du marché local de Waisai</strong>: Flânez parmi les étals colorés du marché, découvrez les fruits exotiques, les épices et l'artisanat local. C'est une immersion authentique dans la vie quotidienne des Papous.",
+        "🏖️ <strong>Détente sur la plage de Waisai</strong>: Profitez de l'après-midi pour vous détendre sur une des plages calmes aux alentours de Waisai. Baignez-vous dans les eaux chaudes et laissez le soleil tropical recharger vos batteries."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "🍽️",
+          "titre": "Cuisine locale",
+          "texte": "Goûtez au 'ikan bakar' (poisson grillé) fraîchement pêché, un délice simple et savoureux que vous trouverez dans les petits restaurants locaux."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🐠",
+      "titre": "Premières immersions et exploration marine",
+      "legende": "Aujourd'hui marque le début de vos aventures sous-marines. Que vous soyez plongeur certifié ou amateur de snorkeling, les eaux de Raja Ampat révèlent une vie marine d'une richesse inégalée. Des coraux foisonnants aux poissons multicolores, chaque coup de palme est une découverte. C'est une première rencontre avec la biodiversité exceptionnelle de l'archipel.",
+      "lieu": "Waisai, Waigeo",
+      "activites": [
+        "🤿 <strong>Snorkeling ou baptême de plongée</strong>: Explorez les récifs peu profonds près de Waisai, regorgeant de poissons-clowns, de tortues et de coraux vivants. Les débutants peuvent s'initier à la plongée sous la supervision d'un instructeur.",
+        "🐡 <strong>Plongée sur un site local (pour certifiés)</strong>: Effectuez une première plongée pour vous familiariser avec l'environnement et la richesse des fonds marins. Des sites comme Mioskon ou Friwen sont d'excellents points de départ."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "⚠️",
+          "titre": "Protection des coraux",
+          "texte": "Évitez de toucher les coraux et respectez la vie marine. Utilisez une crème solaire respectueuse des récifs."
+        },
+        {
+          "symbole": "📸",
+          "titre": "Matériel",
+          "texte": "N'oubliez pas votre appareil photo étanche pour immortaliser ces moments magiques sous l'eau."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🏞️",
+      "titre": "Excursion nature à Batanta et villages traditionnels",
+      "legende": "Évadez-vous de Waisai pour une journée d'exploration sur l'île voisine de Batanta. Au programme, une immersion dans la nature luxuriante avec des cascades rafraîchissantes et la découverte de villages traditionnels. C'est une belle occasion de prendre le pouls de la vie locale et d'apprécier la beauté sauvage de l'intérieur des terres.",
+      "lieu": "Batanta, Waigeo",
+      "activites": [
+        "💦 <strong>Randonnée vers une cascade cachée</strong>: Partez en bateau puis en courte randonnée à travers la jungle dense de Batanta pour atteindre une cascade rafraîchissante. Profitez d'une baignade revigorante dans ses eaux claires.",
+        "🏘️ <strong>Visite d'un village traditionnel Papou</strong>: Rencontrez les habitants, découvrez leur mode de vie simple et leurs coutumes. C'est une expérience culturelle enrichissante et un aperçu de l'authenticité de Raja Ampat."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "👟",
+          "titre": "Équipement",
+          "texte": "Prévoyez des chaussures de marche confortables et antidérapantes pour la randonnée vers la cascade, ainsi qu'un maillot de bain."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "🛥️",
+      "titre": "Transfert vers une île centrale : Kri ou Gam",
+      "legende": "Aujourd'hui, vous quittez Waisai pour vous immerger davantage au cœur de Raja Ampat. Un transfert en bateau vous mènera vers une des îles emblématiques comme Kri ou Gam, réputées pour leurs homestays chaleureux et leurs sites de plongée exceptionnels. L'isolement et la beauté brute de ces îles promettent une expérience inoubliable.",
+      "lieu": "Kri ou Gam",
+      "activites": [
+        "🚤 <strong>Transfert en bateau vers votre homestay</strong>: Embarquez à bord d'un petit bateau local pour rejoindre votre hébergement sur une île plus reculée. Le trajet offre des vues spectaculaires sur les îlots karstiques.",
+        "🏡 <strong>Installation et découverte des environs</strong>: Prenez vos quartiers dans votre bungalow sur pilotis ou en bord de plage. Profitez de l'après-midi pour vous balader le long du rivage et admirer le coucher de soleil."
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Choix de l'île",
+          "texte": "Kri est réputée pour ses spots de plongée accessibles, Gam pour ses paysages intérieurs et sa proximité avec le détroit de Dampier."
+        },
+        {
+          "symbole": "🔋",
+          "titre": "Électricité",
+          "texte": "Dans les homestays, l'électricité est souvent limitée à quelques heures par jour (généralement le soir). Prévoyez des batteries externes."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "🐡",
+      "titre": "Exploration des récifs du détroit de Dampier",
+      "legende": "Le détroit de Dampier est un haut lieu de la biodiversité marine mondiale, un véritable aquarium géant. Plongeurs et snorkelers seront émerveillés par la densité de la vie sous-marine, des bancs de barracudas aux requins de récif. Chaque immersion est une nouvelle aventure, révélant des paysages coralliens intacts et une faune abondante.",
+      "lieu": "Détroit de Dampier (Kri/Gam)",
+      "activites": [
+        "🤿 <strong>Plongée/Snorkeling à Cape Kri</strong>: Explorez l'un des sites les plus riches au monde, où les courants apportent une profusion de vie marine. Attendez-vous à voir des requins, des bancs de poissons et des coraux vibrants.",
+        "🐠 <strong>Plongée/Snorkeling à Sardine Reef</strong>: Un autre spot emblématique, connu pour ses bancs de sardines attirant de plus grands prédateurs. La visibilité est souvent excellente, offrant un spectacle inoubliable."
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "🌊",
+          "titre": "Courants",
+          "texte": "Les courants peuvent être forts dans le détroit de Dampier, ce qui explique la richesse de la vie marine. Suivez toujours les instructions de votre guide."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🦅",
+      "titre": "Observation d'oiseaux et kayak dans la mangrove",
+      "legende": "Après les profondeurs, découvrez la richesse de la faune terrestre et des écosystèmes côtiers. Le matin est idéal pour observer les oiseaux du paradis, emblèmes de la Papouasie. L'après-midi, pagayez paisiblement dans la mangrove, un monde mystérieux où la nature règne en maître. Une journée pour apprécier la diversité de Raja Ampat au-delà de ses récifs.",
+      "lieu": "Gam ou Waigeo",
+      "activites": [
+        "🐦 <strong>Randonnée d'observation des oiseaux du paradis</strong>: Levez-vous tôt pour une excursion dans la jungle à la recherche du fameux oiseau du paradis rouge. Leur danse nuptiale est un spectacle rare et fascinant.",
+        "🛶 <strong>Exploration en kayak de la mangrove</strong>: Pagayez silencieusement à travers les tunnels naturels formés par les palétuviers. C'est une expérience paisible, offrant l'opportunité d'observer des oiseaux et des petits animaux."
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "🤫",
+          "titre": "Discrétion",
+          "texte": "Soyez silencieux lors de l'observation des oiseaux pour ne pas les effrayer. Des jumelles sont fortement recommandées."
+        },
+        {
+          "symbole": "🦟",
+          "titre": "Protection",
+          "texte": "N'oubliez pas l'anti-moustique, surtout lors des excursions dans la jungle et la mangrove."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "⛰️",
+      "titre": "Excursion emblématique à Pianemo",
+      "legende": "Aujourd'hui, cap sur Pianemo, l'un des paysages les plus iconiques de Raja Ampat. L'ascension des marches jusqu'au point de vue offre une récompense inoubliable : une vue panoramique sur les îlots karstiques émergeant d'un lagon turquoise. C'est une carte postale vivante, suivie d'une baignade rafraîchissante dans ses eaux cristallines.",
+      "lieu": "Pianemo",
+      "activites": [
+        "🪜 <strong>Ascension du point de vue de Pianemo</strong>: Gravissez les escaliers en bois jusqu'au sommet pour admirer le panorama à couper le souffle sur les formations rocheuses et les lagons. La vue est absolument spectaculaire et emblématique de Raja Ampat.",
+        "🏊‍♀️ <strong>Snorkeling dans les lagons de Pianemo</strong>: Après l'effort, le réconfort ! Plongez dans les eaux calmes et peu profondes des lagons autour de Pianemo, où vous pourrez observer des poissons colorés et des coraux."
+      ],
+      "illustration": "jour10.jpg",
+      "encarts": [
+        {
+          "symbole": "☀️",
+          "titre": "Protection solaire",
+          "texte": "Le soleil est intense à Pianemo. Prévoyez chapeau, lunettes de soleil et crème solaire biodégradable."
+        }
+      ]
+    },
+    {
+      "jour": 11,
+      "symbole": "🦈",
+      "titre": "Rencontre avec la grande faune marine",
+      "legende": "Préparez-vous pour une journée riche en émotions et en rencontres inoubliables. Raja Ampat est réputée pour sa mégafaune marine. Vous aurez peut-être la chance d'observer des raies manta majestueuses, des requins de récif ou même des requins-tapis. Chaque plongée est une promesse de frissons et de découvertes sous-marines.",
+      "lieu": "Détroit de Dampier",
+      "activites": [
+        " manta <strong>Plongée/Snorkeling à Manta Point</strong>: Rendez-vous sur un site où les raies manta viennent se faire nettoyer. C'est une expérience magique de nager aux côtés de ces géants doux de l'océan.",
+        "🐠 <strong>Exploration d'un récif corallien profond</strong>: Plongez sur un site comme Mike's Point ou Blue Magic, connus pour leurs coraux mous luxuriants, leurs bancs de poissons et la possibilité d'apercevoir des requins de récif ou des wobbegongs."
+      ],
+      "illustration": "jour11.jpg",
+      "encarts": [
+        {
+          "symbole": "🧘‍♀️",
+          "titre": "Comportement",
+          "texte": "Gardez une distance respectueuse avec les animaux marins et évitez tout contact pour ne pas les perturber."
+        }
+      ]
+    },
+    {
+      "jour": 12,
+      "symbole": "🛶",
+      "titre": "Détente insulaire et immersion culturelle",
+      "legende": "Après plusieurs jours d'explorations intenses, cette journée est dédiée à la détente et à l'immersion dans le rythme paisible de la vie insulaire. Profitez de la plage, lisez un livre ou partez à la rencontre des habitants du village voisin. C'est une occasion de se ressourcer et de vivre l'authenticité de Raja Ampat loin de l'agitation.",
+      "lieu": "Kri ou Gam",
+      "activites": [
+        "🚶‍♀️ <strong>Visite d'un village local</strong>: Promenez-vous dans le village voisin de votre homestay, échangez avec les enfants et les habitants. C'est une belle opportunité de découvrir leur quotidien et leur artisanat.",
+        "🧘‍♀️ <strong>Farniente et baignade sur la plage</strong>: Profitez de l'après-midi pour vous détendre sur le sable blanc, nager dans les eaux cristallines ou simplement admirer la vue sur l'océan et les îles environnantes."
+      ],
+      "illustration": "jour12.jpg",
+      "encarts": [
+        {
+          "symbole": "🎁",
+          "titre": "Soutien local",
+          "texte": "Si vous achetez de l'artisanat local, cela contribue directement à l'économie des communautés insulaires."
+        }
+      ]
+    },
+    {
+      "jour": 13,
+      "symbole": "🐠",
+      "titre": "Journée de plongée avancée ou snorkeling intensif",
+      "legende": "Pour les passionnés, cette journée est consacrée à l'exploration de sites de plongée plus reculés ou à des immersions plus longues. Pour les snorkelers, c'est l'occasion de découvrir de nouveaux récifs moins fréquentés. C'est une journée pour pousser l'exploration un peu plus loin et s'émerveiller devant la diversité infinie des fonds marins de Raja Ampat.",
+      "lieu": "Détroit de Dampier ou îles environnantes",
+      "activites": [
+        "🤿 <strong>Plongée sur un site moins connu</strong>: Accompagné de votre guide, explorez un site de plongée moins fréquenté, offrant des découvertes uniques et une tranquillité appréciable. La surprise est souvent au rendez-vous.",
+        "🌌 <strong>Plongée de nuit (optionnel)</strong>: Si les conditions le permettent et si vous êtes certifié, une plongée de nuit révèle une faune marine différente et une ambiance magique. Les récifs s'animent sous un nouveau jour."
+      ],
+      "illustration": "jour13.jpg",
+      "encarts": [
+        {
+          "symbole": "🔦",
+          "titre": "Plongée de nuit",
+          "texte": "Pour la plongée de nuit, assurez-vous d'avoir une lampe de plongée et une bonne maîtrise de vos compétences. C'est une expérience incroyable."
+        }
+      ]
+    },
+    {
+      "jour": 14,
+      "symbole": "🏝️",
+      "titre": "Excursion aux îles Fam et vues panoramiques",
+      "legende": "Aujourd'hui, vous partez à la découverte des îles Fam, un archipel miniature offrant des paysages époustouflants. L'ascension vers le point de vue de Fam est une alternative magnifique à Pianemo, avec des vues tout aussi spectaculaires. C'est une journée pour les amateurs de paysages grandioses et de baignades dans des eaux cristallines.",
+      "lieu": "Îles Fam",
+      "activites": [
+        "🪜 <strong>Ascension du point de vue des îles Fam</strong>: Montez les marches pour atteindre un belvédère offrant une vue panoramique sur les lagons turquoise et les formations karstiques des îles Fam. Un moment parfait pour des photos mémorables.",
+        "🏊‍♀️ <strong>Snorkeling et baignade à Melissa's Garden</strong>: Plongez dans les eaux claires de Melissa's Garden, un site de snorkeling réputé pour son jardin de coraux colorés et sa vie marine abondante. C'est un véritable paradis sous-marin."
+      ],
+      "illustration": "jour14.jpg",
+      "encarts": [
+        {
+          "symbole": "🗺️",
+          "titre": "Itinéraire",
+          "texte": "Les îles Fam sont un peu plus éloignées, assurez-vous que votre homestay ou votre tour operator propose cette excursion."
+        }
+      ]
+    },
+    {
+      "jour": 15,
+      "symbole": "🐢",
+      "titre": "Dernières immersions et adieux aux récifs",
+      "legende": "C'est votre dernière journée complète dans ce paradis sous-marin. Profitez-en pour faire une dernière plongée ou session de snorkeling sur votre site préféré, ou découvrir un nouveau spot. Imprégnez-vous une dernière fois de la beauté des récifs et de la sérénité des îles. C'est un moment pour graver ces images dans votre mémoire avant le retour.",
+      "lieu": "Kri ou Gam",
+      "activites": [
+        "🤿 <strong>Plongée/Snorkeling d'adieu</strong>: Choisissez un site que vous avez particulièrement apprécié ou explorez un nouveau spot pour une dernière immersion. Profitez de chaque instant sous l'eau.",
+        "🌅 <strong>Baignade et farniente au coucher du soleil</strong>: Passez l'après-midi à vous détendre sur la plage, à nager et à admirer le spectaculaire coucher de soleil tropical, un moment paisible pour clore votre séjour insulaire."
+      ],
+      "illustration": "jour15.jpg",
+      "encarts": [
+        {
+          "symbole": " souvenirs",
+          "titre": "Souvenirs",
+          "texte": "Prenez le temps de trier vos photos et vidéos pour revivre ces moments magiques et les partager avec vos proches."
+        }
+      ]
+    },
+    {
+      "jour": 16,
+      "symbole": "🚢",
+      "titre": "Retour vers Waisai et transition",
+      "legende": "Il est temps de quitter la tranquillité des îles reculées pour revenir vers Waisai. Ce transfert marque une transition douce vers la civilisation, avec le confort d'un hébergement plus conventionnel. Profitez de cette soirée pour vous remémorer les moments forts de votre aventure et préparer la suite de votre voyage.",
+      "lieu": "Waisai, Waigeo",
+      "activites": [
+        "🚤 <strong>Transfert en bateau vers Waisai</strong>: Reprenez le bateau depuis votre homestay pour rejoindre Waisai. Le trajet offre une dernière occasion d'admirer les paysages marins.",
+        "🍽️ <strong>Dîner dans un restaurant local à Waisai</strong>: Profitez de la variété des options de restauration à Waisai pour un dîner savoureux, peut-être avec du poisson frais grillé."
+      ],
+      "illustration": "jour16.jpg",
+      "encarts": [
+        {
+          "symbole": "🧳",
+          "titre": "Préparation",
+          "texte": "Commencez à préparer vos bagages pour le long voyage de retour. Assurez-vous de ne rien oublier."
+        }
+      ]
+    },
+    {
+      "jour": 17,
+      "symbole": "✈️",
+      "titre": "Waisai - Sorong et nuit à Sorong",
+      "legende": "La dernière étape de votre séjour en Papouasie vous ramène à Sorong. Après le ferry, vous passerez la nuit dans cette ville portuaire avant votre vol international. C'est l'occasion de faire quelques emplettes de dernière minute ou de profiter d'un bon repas avant de quitter cette région du monde. Un moment pour dire au revoir à l'Indonésie.",
+      "lieu": "Sorong",
+      "activites": [
+        "🚢 <strong>Ferry de Waisai à Sorong</strong>: Reprenez le ferry public rapide pour retourner à Sorong. Le trajet dure environ deux heures.",
+        "🏨 <strong>Installation à l'hôtel et dîner d'adieu à Sorong</strong>: Installez-vous dans votre hôtel à Sorong. Profitez d'un dernier dîner indonésien pour clôturer votre aventure en beauté."
+      ],
+      "illustration": "jour17.jpg",
+      "encarts": [
+        {
+          "symbole": " souvenir",
+          "titre": "Achats",
+          "texte": "Sorong offre quelques boutiques de souvenirs si vous souhaitez rapporter un dernier objet artisanal de Papouasie."
+        }
+      ]
+    },
+    {
+      "jour": 18,
+      "symbole": "🛫",
+      "titre": "Vol Sorong - Jakarta/Transit",
+      "legende": "Le voyage de retour commence. Vous quittez Sorong pour un vol domestique vers une grande ville de transit indonésienne comme Jakarta, avant d'entamer la partie internationale de votre trajet. C'est le début d'un long cheminement, mais la tête remplie de souvenirs inoubliables des merveilles de Raja Ampat.",
+      "lieu": "Sorong",
+      "activites": [
+        "✈️ <strong>Vol Sorong - Jakarta ou autre hub</strong>: Embarquement pour votre vol domestique, première étape du retour vers la France. Profitez de la vue aérienne sur les îles que vous avez explorées."
+      ],
+      "illustration": "jour18.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Horaires",
+          "texte": "Vérifiez bien les horaires de vos vols pour éviter tout stress inutile lors des correspondances."
+        }
+      ]
+    },
+    {
+      "jour": 19,
+      "symbole": "✈️",
+      "titre": "Vol en transit international",
+      "legende": "Cette journée est entièrement consacrée au voyage de retour, avec des escales internationales. C'est l'occasion de se reposer, de regarder des films ou de trier vos photos, en repensant aux paysages époustouflants et aux rencontres sous-marines de Raja Ampat. Le retour à la réalité se fait en douceur, la tête pleine de souvenirs.",
+      "lieu": "En transit",
+      "activites": [
+        "✈️ <strong>Vol en transit international</strong>: Poursuite de votre vol retour avec une escale majeure. Détendez-vous et profitez des services à bord."
+      ],
+      "illustration": "jour19.jpg",
+      "encarts": [
+        {
+          "symbole": "💧",
+          "titre": "Hydratation",
+          "texte": "Continuez à bien vous hydrater pendant les vols pour limiter la fatigue liée au décalage horaire."
+        }
+      ]
+    },
+    {
+      "jour": 20,
+      "symbole": "🛬",
+      "titre": "Arrivée à Paris",
+      "legende": "Après un voyage mémorable, vous atterrissez enfin à Paris. La tête remplie d'images de coraux colorés, de poissons tropicaux et de paysages insulaires à couper le souffle, vous retrouvez la vie quotidienne. Raja Ampat restera gravé dans votre mémoire comme une expérience unique et une immersion totale dans l'un des derniers paradis de la planète.",
+      "lieu": "Paris",
+      "activites": [
+        "🛬 <strong>Arrivée à l'aéroport de Paris</strong>: Atterrissage à Paris, marquant la fin de votre incroyable voyage à Raja Ampat. Il est temps de rentrer chez vous, la tête pleine de souvenirs inoubliables."
+      ],
+      "illustration": "jour20.jpg",
+      "encarts": [
+        {
+          "symbole": "🏠",
+          "titre": "Retour",
+          "texte": "Prenez le temps de vous reposer et de vous réacclimater au fuseau horaire. Partagez vos aventures avec vos proches !"
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol: prix/pers (Paris-Sorong A/R)",
+      "symbole": "🛬",
+      "texte": "Environ 1500€"
+    },
+    {
+      "titre": "Budget transports: prix/pers (Ferry, bateaux inter-îles, transferts)",
+      "symbole": "🚆",
+      "texte": "Environ 300€"
+    },
+    {
+      "titre": "Budget repas: prix/pers (hors pension complète, snacks, boissons)",
+      "symbole": "🥗",
+      "texte": "Environ 400€"
+    },
+    {
+      "titre": "Budget logement: prix/pers (18 nuits en homestay/resort moyen)",
+      "symbole": "🛏️",
+      "texte": "Environ 1800€"
+    },
+    {
+      "titre": "Budget activités/excursions: prix/pers (Plongées, snorkeling tours, permis)",
+      "symbole": "🤿",
+      "texte": "Environ 1200€"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois d'octobre à avril.",
+      "symbole": "☀️"
+    },
+    {
+      "titre": "Ces mois offrent des mers plus calmes et moins de précipitations, garantissant une meilleure visibilité sous-marine et des conditions de navigation optimales.",
+      "symbole": "🌊"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "Visa: Les citoyens français bénéficient généralement d'une exemption de visa pour les séjours de moins de 30 jours en Indonésie (Visa on Arrival gratuit). Vérifiez les dernières réglementations avant le départ.",
+      "symbole": "🛂"
+    },
+    {
+      "titre": "Monnaie: La Roupie indonésienne (IDR). Les distributeurs automatiques sont rares à Raja Ampat (principalement à Sorong et Waisai). Prévoyez suffisamment de liquide pour les homestays et les excursions.",
+      "symbole": "💰"
+    },
+    {
+      "titre": "Santé: Consultez votre médecin pour les vaccins (hépatites, typhoïde, rage) et un traitement antipaludique est recommandé pour Raja Ampat. Emportez une trousse de premiers secours complète.",
+      "symbole": "💊"
+    },
+    {
+      "titre": "Électricité: 220V, prises de type C et F (européennes). L'électricité est souvent limitée à quelques heures par jour dans les homestays. Prévoyez des batteries externes pour vos appareils.",
+      "symbole": "🔌"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Informations officielles sur l'Indonésie",
+      "titre": "Office du Tourisme d'Indonésie",
+      "url": "https://www.indonesia.travel/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Prévisions météo locales pour Raja Ampat",
+      "titre": "Météo Raja Ampat",
+      "url": "https://www.accuweather.com/fr/id/raja-ampat/207000/weather-forecast/207000",
+      "symbole": "🌤️"
+    },
+    {
+      "legende": "Informations sur les permis de conservation Raja Ampat",
+      "titre": "Raja Ampat Homestay Association",
+      "url": "https://www.stayrajaampat.com/raja-ampat-homestays/raja-ampat-marine-park-fee/",
+      "symbole": "🐠"
+    }
+  ]
+}
