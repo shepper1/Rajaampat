@@ -1,0 +1,890 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raja Ampat : L'Archipel aux Trésors Subaquatiques </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        template: {
+                            sable: '#F3E5AB',
+                            ocre: '#C66B3D',
+                            roche: '#2D2A26',
+                            ciel: '#4A6C6F',
+                            bg: '#FAFAF9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #C66B3D;
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">Raja Ampat : L'Archipel aux Trésors Subaquatiques</a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Départ de Paris vers l'aventure indonésienne</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Transit international</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Arrivée à Sorong et transfert vers Waisai</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Premiers pas à Waisai et découverte locale</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Premières immersions et exploration marine</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Excursion nature à Batanta et villages traditionnels</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Transfert vers une île centrale : Kri ou Gam</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Exploration des récifs du détroit de Dampier</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Observation d'oiseaux et kayak dans la mangrove</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Excursion emblématique à Pianemo</a>
+            
+                <a href="#jour-11" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J11 Rencontre avec la grande faune marine</a>
+            
+                <a href="#jour-12" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J12 Détente insulaire et immersion culturelle</a>
+            
+                <a href="#jour-13" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J13 Journée de plongée avancée ou snorkeling intensif</a>
+            
+                <a href="#jour-14" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J14 Excursion aux îles Fam et vues panoramiques</a>
+            
+                <a href="#jour-15" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J15 Dernières immersions et adieux aux récifs</a>
+            
+                <a href="#jour-16" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J16 Retour vers Waisai et transition</a>
+            
+                <a href="#jour-17" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J17 Waisai - Sorong et nuit à Sorong</a>
+            
+                <a href="#jour-18" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J18 Vol Sorong - Jakarta/Transit</a>
+            
+                <a href="#jour-19" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J19 Vol en transit international</a>
+            
+                <a href="#jour-20" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J20 Arrivée à Paris</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[85vh] flex items-center justify-center overflow-hidden pt-12 md:pt-0">
+        
+        <div class="absolute inset-0 bg-black/50 z-10"></div>
+
+        <video autoplay muted loop playsinline 
+               poster="https://images.unsplash.com/photo-1579606946838-6db34433f3c0?q=80&w=2070"
+               class="absolute inset-0 w-full h-full object-cover">
+            <source src="https://videos.pexels.com/video-files/4456988/4456988-hd_1920_1080_25fps.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo.
+        </video>
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.3em] mb-4 uppercase text-sm font-semibold">Feuille de Route</p>
+            <h1 class="font-Playfair italic text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">Rajaampat</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-light max-w-2xl mx-auto leading-relaxed">Raja Ampat : L'Archipel aux Trésors Subaquatiques</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 shadow-sm">🗓️ 20 jours</span>
+                <span class="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 shadow-sm">💰 5200€ / pers</span>
+                <span class="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 shadow-sm">🛬 Environ 20-24 heures (avec escales) depuis Paris</span>
+            </div>
+
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-20 relative">
+        
+        <div class="text-center mb-16">
+            <span class="text-template-ocre font-bold tracking-widest text-xs uppercase">Le Roadtrip</span>
+            <h2 class="font-serif text-4xl mt-2 text-template-roche">Votre Programme</h2>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de Paris vers l'aventure indonésienne</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Le grand départ est lancé ! Préparez-vous pour un long voyage transcontinental. Profitez des escales pour vous détendre et vous imprégner de l'excitation de l'aventure qui vous attend. Le chemin vers Raja Ampat est une partie intégrante de l'expérience, marquant le début d'une immersion totale dans un monde lointain et préservé.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>✈️ <strong>Vol Paris - Jakarta/Doha/Singapour</strong>: Embarquement pour un vol long-courrier, première étape vers l'Indonésie. Profitez du confort à bord pour vous reposer ou commencer à rêver de vos futures explorations sous-marines.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Rajaampat/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ Conseil de vol</p>
+                                <p class="text-gray-700">Privilégiez les compagnies offrant un bon confort sur les vols longs, comme Qatar Airways, Emirates ou Singapore Airlines, pour un voyage plus agréable.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Transit international</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Ce jour est dédié au transit aérien, traversant les fuseaux horaires et les continents. C'est l'occasion de se reposer, de lire ou de regarder des films en attendant la prochaine connexion. Chaque escale vous rapproche un peu plus de la magie de Raja Ampat, vous préparant mentalement à l'évasion.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>✈️ <strong>Vol en transit</strong>: Poursuite du voyage avec une escale majeure, souvent à Jakarta, Singapour ou Doha, avant le vol domestique vers Sorong. Hydratez-vous et étirez-vous régulièrement pour minimiser la fatigue.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Rajaampat/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💤 Récupération</p>
+                                <p class="text-gray-700">Essayez de dormir pendant les vols pour mieux gérer le décalage horaire. Un masque de sommeil et des bouchons d'oreille peuvent être très utiles.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée à Sorong et transfert vers Waisai</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long périple, vous atterrissez enfin à Sorong, porte d'entrée de Raja Ampat. La chaleur et l'humidité tropicales vous accueillent. Une fois le court vol domestique terminé, un ferry vous mènera à Waisai, la capitale de Waigeo, où l'air marin commence déjà à vous envelopper, annonçant la proximité du paradis.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>✈️ <strong>Vol domestique vers Sorong</strong>: Atterrissage à l'aéroport de Sorong (SOQ), où l'aventure commence réellement. Récupérez vos bagages et préparez-vous pour la prochaine étape.</li>
+                            
+                                <li>🚢 <strong>Transfert en ferry vers Waisai</strong>: Prenez le ferry public rapide depuis le port de Sorong jusqu'à Waisai (environ 2 heures). Profitez des premières vues sur les îles verdoyantes émergeant de l'océan turquoise.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Rajaampat/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💰 Permis Raja Ampat</p>
+                                <p class="text-gray-700">N'oubliez pas d'acheter votre permis de conservation (PIN) à Sorong ou Waisai. Il est obligatoire et finance la protection de l'archipel.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💵 Argent liquide</p>
+                                <p class="text-gray-700">Retirez suffisamment d'argent liquide à Sorong car les distributeurs sont rares et peu fiables à Waisai et inexistants sur les îles.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Premiers pas à Waisai et découverte locale</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Journée d'acclimatation à Waisai, la petite capitale de l'archipel. L'ambiance y est décontractée, entre le marché coloré et les plages paisibles. C'est l'occasion de prendre ses marques, de goûter aux saveurs locales et de se préparer aux merveilles sous-marines qui vous attendent. Laissez-vous bercer par le rythme insulaire.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🚶‍♂️ <strong>Exploration du marché local de Waisai</strong>: Flânez parmi les étals colorés du marché, découvrez les fruits exotiques, les épices et l'artisanat local. C'est une immersion authentique dans la vie quotidienne des Papous.</li>
+                            
+                                <li>🏖️ <strong>Détente sur la plage de Waisai</strong>: Profitez de l'après-midi pour vous détendre sur une des plages calmes aux alentours de Waisai. Baignez-vous dans les eaux chaudes et laissez le soleil tropical recharger vos batteries.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Rajaampat/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍽️ Cuisine locale</p>
+                                <p class="text-gray-700">Goûtez au 'ikan bakar' (poisson grillé) fraîchement pêché, un délice simple et savoureux que vous trouverez dans les petits restaurants locaux.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Premières immersions et exploration marine</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui marque le début de vos aventures sous-marines. Que vous soyez plongeur certifié ou amateur de snorkeling, les eaux de Raja Ampat révèlent une vie marine d'une richesse inégalée. Des coraux foisonnants aux poissons multicolores, chaque coup de palme est une découverte. C'est une première rencontre avec la biodiversité exceptionnelle de l'archipel.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🤿 <strong>Snorkeling ou baptême de plongée</strong>: Explorez les récifs peu profonds près de Waisai, regorgeant de poissons-clowns, de tortues et de coraux vivants. Les débutants peuvent s'initier à la plongée sous la supervision d'un instructeur.</li>
+                            
+                                <li>🐡 <strong>Plongée sur un site local (pour certifiés)</strong>: Effectuez une première plongée pour vous familiariser avec l'environnement et la richesse des fonds marins. Des sites comme Mioskon ou Friwen sont d'excellents points de départ.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Rajaampat/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⚠️ Protection des coraux</p>
+                                <p class="text-gray-700">Évitez de toucher les coraux et respectez la vie marine. Utilisez une crème solaire respectueuse des récifs.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Matériel</p>
+                                <p class="text-gray-700">N'oubliez pas votre appareil photo étanche pour immortaliser ces moments magiques sous l'eau.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Excursion nature à Batanta et villages traditionnels</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Évadez-vous de Waisai pour une journée d'exploration sur l'île voisine de Batanta. Au programme, une immersion dans la nature luxuriante avec des cascades rafraîchissantes et la découverte de villages traditionnels. C'est une belle occasion de prendre le pouls de la vie locale et d'apprécier la beauté sauvage de l'intérieur des terres.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>💦 <strong>Randonnée vers une cascade cachée</strong>: Partez en bateau puis en courte randonnée à travers la jungle dense de Batanta pour atteindre une cascade rafraîchissante. Profitez d'une baignade revigorante dans ses eaux claires.</li>
+                            
+                                <li>🏘️ <strong>Visite d'un village traditionnel Papou</strong>: Rencontrez les habitants, découvrez leur mode de vie simple et leurs coutumes. C'est une expérience culturelle enrichissante et un aperçu de l'authenticité de Raja Ampat.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Rajaampat/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👟 Équipement</p>
+                                <p class="text-gray-700">Prévoyez des chaussures de marche confortables et antidérapantes pour la randonnée vers la cascade, ainsi qu'un maillot de bain.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Transfert vers une île centrale : Kri ou Gam</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, vous quittez Waisai pour vous immerger davantage au cœur de Raja Ampat. Un transfert en bateau vous mènera vers une des îles emblématiques comme Kri ou Gam, réputées pour leurs homestays chaleureux et leurs sites de plongée exceptionnels. L'isolement et la beauté brute de ces îles promettent une expérience inoubliable.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🚤 <strong>Transfert en bateau vers votre homestay</strong>: Embarquez à bord d'un petit bateau local pour rejoindre votre hébergement sur une île plus reculée. Le trajet offre des vues spectaculaires sur les îlots karstiques.</li>
+                            
+                                <li>🏡 <strong>Installation et découverte des environs</strong>: Prenez vos quartiers dans votre bungalow sur pilotis ou en bord de plage. Profitez de l'après-midi pour vous balader le long du rivage et admirer le coucher de soleil.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Rajaampat/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Choix de l'île</p>
+                                <p class="text-gray-700">Kri est réputée pour ses spots de plongée accessibles, Gam pour ses paysages intérieurs et sa proximité avec le détroit de Dampier.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🔋 Électricité</p>
+                                <p class="text-gray-700">Dans les homestays, l'électricité est souvent limitée à quelques heures par jour (généralement le soir). Prévoyez des batteries externes.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Exploration des récifs du détroit de Dampier</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Le détroit de Dampier est un haut lieu de la biodiversité marine mondiale, un véritable aquarium géant. Plongeurs et snorkelers seront émerveillés par la densité de la vie sous-marine, des bancs de barracudas aux requins de récif. Chaque immersion est une nouvelle aventure, révélant des paysages coralliens intacts et une faune abondante.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🤿 <strong>Plongée/Snorkeling à Cape Kri</strong>: Explorez l'un des sites les plus riches au monde, où les courants apportent une profusion de vie marine. Attendez-vous à voir des requins, des bancs de poissons et des coraux vibrants.</li>
+                            
+                                <li>🐠 <strong>Plongée/Snorkeling à Sardine Reef</strong>: Un autre spot emblématique, connu pour ses bancs de sardines attirant de plus grands prédateurs. La visibilité est souvent excellente, offrant un spectacle inoubliable.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Rajaampat/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌊 Courants</p>
+                                <p class="text-gray-700">Les courants peuvent être forts dans le détroit de Dampier, ce qui explique la richesse de la vie marine. Suivez toujours les instructions de votre guide.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Observation d'oiseaux et kayak dans la mangrove</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après les profondeurs, découvrez la richesse de la faune terrestre et des écosystèmes côtiers. Le matin est idéal pour observer les oiseaux du paradis, emblèmes de la Papouasie. L'après-midi, pagayez paisiblement dans la mangrove, un monde mystérieux où la nature règne en maître. Une journée pour apprécier la diversité de Raja Ampat au-delà de ses récifs.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🐦 <strong>Randonnée d'observation des oiseaux du paradis</strong>: Levez-vous tôt pour une excursion dans la jungle à la recherche du fameux oiseau du paradis rouge. Leur danse nuptiale est un spectacle rare et fascinant.</li>
+                            
+                                <li>🛶 <strong>Exploration en kayak de la mangrove</strong>: Pagayez silencieusement à travers les tunnels naturels formés par les palétuviers. C'est une expérience paisible, offrant l'opportunité d'observer des oiseaux et des petits animaux.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Rajaampat/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🤫 Discrétion</p>
+                                <p class="text-gray-700">Soyez silencieux lors de l'observation des oiseaux pour ne pas les effrayer. Des jumelles sont fortement recommandées.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🦟 Protection</p>
+                                <p class="text-gray-700">N'oubliez pas l'anti-moustique, surtout lors des excursions dans la jungle et la mangrove.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Excursion emblématique à Pianemo</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, cap sur Pianemo, l'un des paysages les plus iconiques de Raja Ampat. L'ascension des marches jusqu'au point de vue offre une récompense inoubliable : une vue panoramique sur les îlots karstiques émergeant d'un lagon turquoise. C'est une carte postale vivante, suivie d'une baignade rafraîchissante dans ses eaux cristallines.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🪜 <strong>Ascension du point de vue de Pianemo</strong>: Gravissez les escaliers en bois jusqu'au sommet pour admirer le panorama à couper le souffle sur les formations rocheuses et les lagons. La vue est absolument spectaculaire et emblématique de Raja Ampat.</li>
+                            
+                                <li>🏊‍♀️ <strong>Snorkeling dans les lagons de Pianemo</strong>: Après l'effort, le réconfort ! Plongez dans les eaux calmes et peu profondes des lagons autour de Pianemo, où vous pourrez observer des poissons colorés et des coraux.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Rajaampat/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☀️ Protection solaire</p>
+                                <p class="text-gray-700">Le soleil est intense à Pianemo. Prévoyez chapeau, lunettes de soleil et crème solaire biodégradable.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-11" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Rencontre avec la grande faune marine</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Préparez-vous pour une journée riche en émotions et en rencontres inoubliables. Raja Ampat est réputée pour sa mégafaune marine. Vous aurez peut-être la chance d'observer des raies manta majestueuses, des requins de récif ou même des requins-tapis. Chaque plongée est une promesse de frissons et de découvertes sous-marines.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li> manta <strong>Plongée/Snorkeling à Manta Point</strong>: Rendez-vous sur un site où les raies manta viennent se faire nettoyer. C'est une expérience magique de nager aux côtés de ces géants doux de l'océan.</li>
+                            
+                                <li>🐠 <strong>Exploration d'un récif corallien profond</strong>: Plongez sur un site comme Mike's Point ou Blue Magic, connus pour leurs coraux mous luxuriants, leurs bancs de poissons et la possibilité d'apercevoir des requins de récif ou des wobbegongs.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Rajaampat/main/jour11.jpg" class="w-full h-64 object-cover" alt="Jour 11">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧘‍♀️ Comportement</p>
+                                <p class="text-gray-700">Gardez une distance respectueuse avec les animaux marins et évitez tout contact pour ne pas les perturber.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-12" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 12</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Détente insulaire et immersion culturelle</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après plusieurs jours d'explorations intenses, cette journée est dédiée à la détente et à l'immersion dans le rythme paisible de la vie insulaire. Profitez de la plage, lisez un livre ou partez à la rencontre des habitants du village voisin. C'est une occasion de se ressourcer et de vivre l'authenticité de Raja Ampat loin de l'agitation.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🚶‍♀️ <strong>Visite d'un village local</strong>: Promenez-vous dans le village voisin de votre homestay, échangez avec les enfants et les habitants. C'est une belle opportunité de découvrir leur quotidien et leur artisanat.</li>
+                            
+                                <li>🧘‍♀️ <strong>Farniente et baignade sur la plage</strong>: Profitez de l'après-midi pour vous détendre sur le sable blanc, nager dans les eaux cristallines ou simplement admirer la vue sur l'océan et les îles environnantes.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Rajaampat/main/jour12.jpg" class="w-full h-64 object-cover" alt="Jour 12">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Soutien local</p>
+                                <p class="text-gray-700">Si vous achetez de l'artisanat local, cela contribue directement à l'économie des communautés insulaires.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-13" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 13</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Journée de plongée avancée ou snorkeling intensif</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Pour les passionnés, cette journée est consacrée à l'exploration de sites de plongée plus reculés ou à des immersions plus longues. Pour les snorkelers, c'est l'occasion de découvrir de nouveaux récifs moins fréquentés. C'est une journée pour pousser l'exploration un peu plus loin et s'émerveiller devant la diversité infinie des fonds marins de Raja Ampat.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🤿 <strong>Plongée sur un site moins connu</strong>: Accompagné de votre guide, explorez un site de plongée moins fréquenté, offrant des découvertes uniques et une tranquillité appréciable. La surprise est souvent au rendez-vous.</li>
+                            
+                                <li>🌌 <strong>Plongée de nuit (optionnel)</strong>: Si les conditions le permettent et si vous êtes certifié, une plongée de nuit révèle une faune marine différente et une ambiance magique. Les récifs s'animent sous un nouveau jour.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Rajaampat/main/jour13.jpg" class="w-full h-64 object-cover" alt="Jour 13">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🔦 Plongée de nuit</p>
+                                <p class="text-gray-700">Pour la plongée de nuit, assurez-vous d'avoir une lampe de plongée et une bonne maîtrise de vos compétences. C'est une expérience incroyable.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-14" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 14</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Excursion aux îles Fam et vues panoramiques</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, vous partez à la découverte des îles Fam, un archipel miniature offrant des paysages époustouflants. L'ascension vers le point de vue de Fam est une alternative magnifique à Pianemo, avec des vues tout aussi spectaculaires. C'est une journée pour les amateurs de paysages grandioses et de baignades dans des eaux cristallines.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🪜 <strong>Ascension du point de vue des îles Fam</strong>: Montez les marches pour atteindre un belvédère offrant une vue panoramique sur les lagons turquoise et les formations karstiques des îles Fam. Un moment parfait pour des photos mémorables.</li>
+                            
+                                <li>🏊‍♀️ <strong>Snorkeling et baignade à Melissa's Garden</strong>: Plongez dans les eaux claires de Melissa's Garden, un site de snorkeling réputé pour son jardin de coraux colorés et sa vie marine abondante. C'est un véritable paradis sous-marin.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Rajaampat/main/jour14.jpg" class="w-full h-64 object-cover" alt="Jour 14">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗺️ Itinéraire</p>
+                                <p class="text-gray-700">Les îles Fam sont un peu plus éloignées, assurez-vous que votre homestay ou votre tour operator propose cette excursion.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-15" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 15</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Dernières immersions et adieux aux récifs</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est votre dernière journée complète dans ce paradis sous-marin. Profitez-en pour faire une dernière plongée ou session de snorkeling sur votre site préféré, ou découvrir un nouveau spot. Imprégnez-vous une dernière fois de la beauté des récifs et de la sérénité des îles. C'est un moment pour graver ces images dans votre mémoire avant le retour.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🤿 <strong>Plongée/Snorkeling d'adieu</strong>: Choisissez un site que vous avez particulièrement apprécié ou explorez un nouveau spot pour une dernière immersion. Profitez de chaque instant sous l'eau.</li>
+                            
+                                <li>🌅 <strong>Baignade et farniente au coucher du soleil</strong>: Passez l'après-midi à vous détendre sur la plage, à nager et à admirer le spectaculaire coucher de soleil tropical, un moment paisible pour clore votre séjour insulaire.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Rajaampat/main/jour15.jpg" class="w-full h-64 object-cover" alt="Jour 15">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1"> souvenirs Souvenirs</p>
+                                <p class="text-gray-700">Prenez le temps de trier vos photos et vidéos pour revivre ces moments magiques et les partager avec vos proches.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-16" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 16</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour vers Waisai et transition</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Il est temps de quitter la tranquillité des îles reculées pour revenir vers Waisai. Ce transfert marque une transition douce vers la civilisation, avec le confort d'un hébergement plus conventionnel. Profitez de cette soirée pour vous remémorer les moments forts de votre aventure et préparer la suite de votre voyage.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🚤 <strong>Transfert en bateau vers Waisai</strong>: Reprenez le bateau depuis votre homestay pour rejoindre Waisai. Le trajet offre une dernière occasion d'admirer les paysages marins.</li>
+                            
+                                <li>🍽️ <strong>Dîner dans un restaurant local à Waisai</strong>: Profitez de la variété des options de restauration à Waisai pour un dîner savoureux, peut-être avec du poisson frais grillé.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Rajaampat/main/jour16.jpg" class="w-full h-64 object-cover" alt="Jour 16">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧳 Préparation</p>
+                                <p class="text-gray-700">Commencez à préparer vos bagages pour le long voyage de retour. Assurez-vous de ne rien oublier.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-17" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 17</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Waisai - Sorong et nuit à Sorong</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">La dernière étape de votre séjour en Papouasie vous ramène à Sorong. Après le ferry, vous passerez la nuit dans cette ville portuaire avant votre vol international. C'est l'occasion de faire quelques emplettes de dernière minute ou de profiter d'un bon repas avant de quitter cette région du monde. Un moment pour dire au revoir à l'Indonésie.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🚢 <strong>Ferry de Waisai à Sorong</strong>: Reprenez le ferry public rapide pour retourner à Sorong. Le trajet dure environ deux heures.</li>
+                            
+                                <li>🏨 <strong>Installation à l'hôtel et dîner d'adieu à Sorong</strong>: Installez-vous dans votre hôtel à Sorong. Profitez d'un dernier dîner indonésien pour clôturer votre aventure en beauté.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Rajaampat/main/jour17.jpg" class="w-full h-64 object-cover" alt="Jour 17">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1"> souvenir Achats</p>
+                                <p class="text-gray-700">Sorong offre quelques boutiques de souvenirs si vous souhaitez rapporter un dernier objet artisanal de Papouasie.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-18" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 18</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Vol Sorong - Jakarta/Transit</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Le voyage de retour commence. Vous quittez Sorong pour un vol domestique vers une grande ville de transit indonésienne comme Jakarta, avant d'entamer la partie internationale de votre trajet. C'est le début d'un long cheminement, mais la tête remplie de souvenirs inoubliables des merveilles de Raja Ampat.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>✈️ <strong>Vol Sorong - Jakarta ou autre hub</strong>: Embarquement pour votre vol domestique, première étape du retour vers la France. Profitez de la vue aérienne sur les îles que vous avez explorées.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Rajaampat/main/jour18.jpg" class="w-full h-64 object-cover" alt="Jour 18">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Horaires</p>
+                                <p class="text-gray-700">Vérifiez bien les horaires de vos vols pour éviter tout stress inutile lors des correspondances.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-19" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 19</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Vol en transit international</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Cette journée est entièrement consacrée au voyage de retour, avec des escales internationales. C'est l'occasion de se reposer, de regarder des films ou de trier vos photos, en repensant aux paysages époustouflants et aux rencontres sous-marines de Raja Ampat. Le retour à la réalité se fait en douceur, la tête pleine de souvenirs.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>✈️ <strong>Vol en transit international</strong>: Poursuite de votre vol retour avec une escale majeure. Détendez-vous et profitez des services à bord.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Rajaampat/main/jour19.jpg" class="w-full h-64 object-cover" alt="Jour 19">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💧 Hydratation</p>
+                                <p class="text-gray-700">Continuez à bien vous hydrater pendant les vols pour limiter la fatigue liée au décalage horaire.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-20" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 20</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée à Paris</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un voyage mémorable, vous atterrissez enfin à Paris. La tête remplie d'images de coraux colorés, de poissons tropicaux et de paysages insulaires à couper le souffle, vous retrouvez la vie quotidienne. Raja Ampat restera gravé dans votre mémoire comme une expérience unique et une immersion totale dans l'un des derniers paradis de la planète.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🛬 <strong>Arrivée à l'aéroport de Paris</strong>: Atterrissage à Paris, marquant la fin de votre incroyable voyage à Raja Ampat. Il est temps de rentrer chez vous, la tête pleine de souvenirs inoubliables.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Rajaampat/main/jour20.jpg" class="w-full h-64 object-cover" alt="Jour 20">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🏠 Retour</p>
+                                <p class="text-gray-700">Prenez le temps de vous reposer et de vous réacclimater au fuseau horaire. Partagez vos aventures avec vos proches !</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+
+    <footer id="pratique" class="bg-white border-t border-gray-200 pt-16 pb-10 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10 mb-12">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed">Budget vol: prix/pers (Paris-Sorong A/R)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed">Budget transports: prix/pers (Ferry, bateaux inter-îles, transferts)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed">Budget repas: prix/pers (hors pension complète, snacks, boissons)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed">Budget logement: prix/pers (18 nuits en homestay/resort moyen)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed">Budget activités/excursions: prix/pers (Plongées, snorkeling tours, permis)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed">Les périodes idéales pour ce séjour sont les mois d'octobre à avril.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed">Ces mois offrent des mers plus calmes et moins de précipitations, garantissant une meilleure visibilité sous-marine et des conditions de navigation optimales.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2">
+                    <span>🧳</span> À savoir
+                </h4>
+                <ul class="text-sm text-gray-600 space-y-3">
+
+                        <li><strong>🛂 :</strong> Visa: Les citoyens français bénéficient généralement d'une exemption de visa pour les séjours de moins de 30 jours en Indonésie (Visa on Arrival gratuit). Vérifiez les dernières réglementations avant le départ.</li>
+                    
+                        <li><strong>💰 :</strong> Monnaie: La Roupie indonésienne (IDR). Les distributeurs automatiques sont rares à Raja Ampat (principalement à Sorong et Waisai). Prévoyez suffisamment de liquide pour les homestays et les excursions.</li>
+                    
+                        <li><strong>💊 :</strong> Santé: Consultez votre médecin pour les vaccins (hépatites, typhoïde, rage) et un traitement antipaludique est recommandé pour Raja Ampat. Emportez une trousse de premiers secours complète.</li>
+                    
+                        <li><strong>🔌 :</strong> Électricité: 220V, prises de type C et F (européennes). L'électricité est souvent limitée à quelques heures par jour dans les homestays. Prévoyez des batteries externes pour vos appareils.</li>
+                    
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2"><span>🔗</span> Liens Utiles</h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://shepper1.github.io/Rajaampat/map.html" target="_blank" class="hover:underline flex items-center gap-2"><strong>🗺️ Carte</strong></a></li>
+                    
+                        <li><a href="https://www.indonesia.travel/" target="_blank" class="hover:underline flex items-center gap-2"><strong>📘 Office du Tourisme d'Indonésie</strong></a></li>
+                    
+                        <li><a href="https://www.accuweather.com/fr/id/raja-ampat/207000/weather-forecast/207000" target="_blank" class="hover:underline flex items-center gap-2"><strong>🌤️ Météo Raja Ampat</strong></a></li>
+                    
+                        <li><a href="https://www.stayrajaampat.com/raja-ampat-homestays/raja-ampat-marine-park-fee/" target="_blank" class="hover:underline flex items-center gap-2"><strong>🐠 Raja Ampat Homestay Association</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="text-center border-t border-gray-100 pt-8">
+            <p class="font-serif text-2xl text-template-roche mb-2">Rajaampat</p>
+            <p class="text-xs text-gray-400">© 2025 - Roadmap</p>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Gestion de l'affichage du menu au scroll
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+
+        // 2. Détection de l'étape active
+        const observerOptions = {
+            root: null,
+            rootMargin: '-40% 0px -60% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+
+                    document.querySelectorAll('.nav-item-desktop').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (activeId.includes('jour') && linkHref === 'jour-1') {
+                            link.classList.add('text-template-ocre');
+                        } else if (activeId === 'pratique' && linkHref === 'pratique') {
+                            link.classList.add('text-template-ocre');
+                        } else {
+                            link.classList.remove('text-template-ocre');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('div[id^="jour-"], footer#pratique').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
